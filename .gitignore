@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.eslintcache
+package-lock.json
+*.log
+.history/
+.idea/
+.DS_Store/
+.DS_Store
+src/assets/.DS_Store
+dist.tar.gz
+*.zip
