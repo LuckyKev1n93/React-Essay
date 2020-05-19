@@ -2,7 +2,7 @@
 
 // import { Children } from 'react';
 
-// 2. element接收几个参数
+// 2. 考虑element接收几个参数, 实现一个createElement方法
 const createElement = (type, config, children) => {
   const props = Object.assign({}, config);
   const childrenLength = [].slice.call(arguments).length - 2;

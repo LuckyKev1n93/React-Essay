@@ -1,13 +1,13 @@
-import simpleReact from './simpleReact';
+import SimpleReact from './SimpleReact';
 
 // 实现createElement的type和props
-simpleReact.createElement('div', { id: 'app' }, 'hello');
+SimpleReact.createElement('div', { id: 'app' }, 'hello');
 
-console.log(simpleReact.createElement('div', { id: 'app' }, 'hello'));
+console.log(SimpleReact.createElement('div', { id: 'app' }, 'hello'));
 
 // 实现jsx转为element
 window.React = {};
-React.createElement = simpleReact.createElement;
+React.createElement = SimpleReact.createElement;
 
 const dom = (
   <div id='wrapper'>
@@ -18,3 +18,8 @@ const dom = (
   </div>
 );
 console.log('dom--->', dom);
+
+// 实现render方法
+const elementA = SimpleReact.createElement('h1', { id: 'title' }, 'hello');
+// SimpleReact.render(elementA, document.querySelector('#app'));
+SimpleReact.render(<h1>hello</h1>, document.querySelector('#app'));
